@@ -51,9 +51,9 @@ func print_student_list(ls *StudentList) {
 	}
 }
 
-func CalculateHash(s Student) string {
+func CalculateHash(s string) string {
 	h := sha256.New()
-	h.Write([]byte(s.name))
+	h.Write([]byte(s))
 	return fmt.Sprintf("%x", h.Sum(nil))
 }
 
@@ -72,7 +72,7 @@ func main() {
 
 	// Calculatin hash of the block data and display it
 
-	output_hash := CalculateHash(*ls.list[0])
+	output_hash := CalculateHash("hello")
 	fmt.Println("Hash of the block data: ", output_hash)
 
 }
