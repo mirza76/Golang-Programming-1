@@ -1,9 +1,10 @@
 package main
 
 import (
-	"https://github.com/mirza76/Golang-Programming-1"
+	"fmt"
 )
 
 func main() {
-
+	output_hash := CalculateHash("hello")
+	fmt.Println("Hash of the block data: ", output_hash)
 }
